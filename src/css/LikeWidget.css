@@ -1,0 +1,69 @@
+.like-container {
+  display: flex;
+  justify-content: center;
+}
+
+.like-button {
+  width: 5.4rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: rgb(240, 255, 240);
+  background-color: red;
+  border: 3px solid red;
+  border-radius: .3rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.like-button:active {
+  border-color: rgb(255, 116, 116);
+  transition: all 0.06s linear;
+}
+
+.heart {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-image: url('../img/heart.png');
+  background-size: cover;
+}
+
+.heart-animation0 { animation: heart-animation0 .5s normal; }
+.heart-animation1 { animation: heart-animation1 .5s normal; }
+.heart-animation2 { animation: heart-animation2 .5s normal; }
+.heart-animation3 { animation: heart-animation3 .5s normal; }
+
+.heart-animation0,
+.heart-animation1,
+.heart-animation2,
+.heart-animation3 { animation-timing-function: ease-out; }
+
+@keyframes heart-animation0 {
+  25%{ transform: translate(-50px, -50px); opacity: .75; }
+  50%{ transform: translate(0, -100px); opacity: .5; }
+  75%{ transform: translate(50px, -150px); opacity: .25; }
+  100%{ transform: translate(0, -200px); opacity: 0; }
+}
+
+@keyframes heart-animation1 {
+  25%{ transform: translate(0, -50px); opacity: .75; }
+  50%{ transform: translate(50px, -100px); opacity: .5; }
+  75%{ transform: translate(-50px, -150px); opacity: .25; }
+  100%{ transform: translate(0, -200px); opacity: 0; }
+}
+
+@keyframes heart-animation2 {
+  25%{ transform: translate(0, -50px); opacity: .75; }
+  50%{ transform: translate(-50px, -100px); opacity: .5; }
+  75%{ transform: translate(50px, -150px); opacity: .25; }
+  100%{ transform: translate(0, -200px); opacity: 0; }
+}
+
+@keyframes heart-animation3 {
+  25%{ transform: translate(50px, -50px); opacity: .75; }
+  50%{ transform: translate(0, -100px); opacity: .5; }
+  75%{ transform: translate(-50px, -150px); opacity: .25; }
+  100%{ transform: translate(0, -200px); opacity: 0; }
+}

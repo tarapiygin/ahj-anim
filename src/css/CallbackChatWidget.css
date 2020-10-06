@@ -1,0 +1,104 @@
+:root {
+  --trans-time: .1s;
+}
+
+.callback-chat-widget {
+  position: fixed;
+  margin: 3rem 3rem;
+  right: 0;
+  bottom: 0;
+}
+
+.callback-chat-widget .chat-form {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: stretch;
+  background-color:#ffffff;
+  right: 0;
+  bottom: 0;
+  height: 20rem;
+  width: 12rem;
+  padding: 1rem 1rem;
+  border: 1px solid lightgray;
+  border-radius: .5rem;
+  box-shadow: .3rem .3rem 1.5rem  lightgray;
+  transition: transform var(--trans-time) linear, opacity var(--trans-time) linear;
+}
+
+.callback-chat-widget .chat-form .close-btn {
+  position: absolute;
+  top: .6rem;
+  right: .8rem;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  transition: all 0.1 linear;
+}
+
+.callback-chat-widget .chat-form .close-btn:hover {
+  transform: scale(1.1, 1.1);
+  text-shadow: .1em .1em .15em gray;
+}
+
+.callback-chat-widget .chat-form .title {
+  font-weight: bolder;
+  user-select: none;
+}
+
+.callback-chat-widget .chat-form textarea {
+  flex-grow: 1;
+  margin: 1rem 0;
+}
+
+.callback-chat-widget .chat-form .button {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: rgb(240, 255, 240);
+  background-color: #017BFF;
+  border: 3px solid #017BFF;
+  border-radius: .3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.callback-chat-widget .chat-form .button:hover {
+  background-color: #0069D9;
+  border-color: #0069D9;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.callback-chat-widget .chat-form .button:active {
+  border-color: rgb(162, 224, 248);
+  transition: all 0.06s linear;
+}
+
+.callback-chat-widget .show-form-btn {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  background-image: url('../img/circle_red.svg');
+  background-size: cover;
+  filter: drop-shadow(.1rem .1rem .3rem  gray);
+  transition: transform var(--trans-time) linear,
+    opacity var(--trans-time) linear,
+    filter var(--trans-time) linear;
+}
+
+.callback-chat-widget .show-form-btn:hover {
+  transform: scale(1.1, 1.1);
+  filter: drop-shadow(.2rem .2rem .3rem  rgb(68, 68, 68));
+}
+
+.callback-chat-widget .hidden {
+  transform: scale(0, 0);
+  opacity: 0;
+}
